@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct PasswordManagerAppApp: App {
+    let persistenceController = PersistenceController.shared
+    @State private var isAuthenticated = false
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isAuthenticated {
+                HomeView(viewModel: PasswordViewModel(context: persistenceController.container.viewContext))
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            } else {
+                AuthenticationView(isAuthenticated: $isAuthenticated)
+            }
         }
     }
 }

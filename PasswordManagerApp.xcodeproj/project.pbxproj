@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1CA511442F0F750300152D69 /* PasswordManagerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CA511422F0F750300152D69 /* PasswordManagerApp.xcdatamodeld */; };
+		1CA511462F0F755E00152D69 /* persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA511452F0F755100152D69 /* persistence.swift */; };
+		1CA511672F0F77E800152D69 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CA511662F0F77DC00152D69 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1CA511052F0F728400152D69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,9 @@
 		1CA510F72F0F728300152D69 /* PasswordManagerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManagerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA511042F0F728400152D69 /* PasswordManagerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA5110E2F0F728400152D69 /* PasswordManagerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA511432F0F750300152D69 /* PasswordManagerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PasswordManagerApp.xcdatamodel; sourceTree = "<group>"; };
+		1CA511452F0F755100152D69 /* persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistence.swift; sourceTree = "<group>"; };
+		1CA511662F0F77DC00152D69 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,14 +44,24 @@
 			path = PasswordManagerApp;
 			sourceTree = "<group>";
 		};
-		1CA511072F0F728400152D69 /* PasswordManagerAppTests */ = {
+		1CA511212F0F738200152D69 /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PasswordManagerAppTests;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		1CA511112F0F728400152D69 /* PasswordManagerAppUITests */ = {
+		1CA511252F0F739B00152D69 /* Services */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PasswordManagerAppUITests;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1CA5112E2F0F73E600152D69 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1CA511322F0F743D00152D69 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +94,14 @@
 		1CA510EE2F0F728300152D69 = {
 			isa = PBXGroup;
 			children = (
+				1CA511212F0F738200152D69 /* Models */,
+				1CA511322F0F743D00152D69 /* Views */,
+				1CA5112E2F0F73E600152D69 /* ViewModels */,
+				1CA511252F0F739B00152D69 /* Services */,
 				1CA510F92F0F728300152D69 /* PasswordManagerApp */,
-				1CA511072F0F728400152D69 /* PasswordManagerAppTests */,
-				1CA511112F0F728400152D69 /* PasswordManagerAppUITests */,
+				1CA511422F0F750300152D69 /* PasswordManagerApp.xcdatamodeld */,
+				1CA511452F0F755100152D69 /* persistence.swift */,
+				1CA511662F0F77DC00152D69 /* README.md */,
 				1CA510F82F0F728300152D69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +133,10 @@
 			);
 			fileSystemSynchronizedGroups = (
 				1CA510F92F0F728300152D69 /* PasswordManagerApp */,
+				1CA511212F0F738200152D69 /* Models */,
+				1CA511252F0F739B00152D69 /* Services */,
+				1CA5112E2F0F73E600152D69 /* ViewModels */,
+				1CA511322F0F743D00152D69 /* Views */,
 			);
 			name = PasswordManagerApp;
 			packageProductDependencies = (
@@ -130,9 +158,6 @@
 			dependencies = (
 				1CA511062F0F728400152D69 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				1CA511072F0F728400152D69 /* PasswordManagerAppTests */,
-			);
 			name = PasswordManagerAppTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +177,6 @@
 			);
 			dependencies = (
 				1CA511102F0F728400152D69 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				1CA511112F0F728400152D69 /* PasswordManagerAppUITests */,
 			);
 			name = PasswordManagerAppUITests;
 			packageProductDependencies = (
@@ -212,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA511672F0F77E800152D69 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA511462F0F755E00152D69 /* persistence.swift in Sources */,
+				1CA511442F0F750300152D69 /* PasswordManagerApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +595,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1CA511422F0F750300152D69 /* PasswordManagerApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1CA511432F0F750300152D69 /* PasswordManagerApp.xcdatamodel */,
+			);
+			currentVersion = 1CA511432F0F750300152D69 /* PasswordManagerApp.xcdatamodel */;
+			path = PasswordManagerApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1CA510EF2F0F728300152D69 /* Project object */;
 }
